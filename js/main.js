@@ -1,9 +1,9 @@
-const input = document.querySelector("input");
+const allLis = document.querySelectorAll("li");
 
-console.log(input);
+allLis.forEach((item) => {
+  console.log(item.textContent);
+});
 
-input.value = "new input value";
-
-input.setAttribute("value", "some other default text");
-
-input.value = input.getAttribute("value");
+for (const listItem of allLis) {
+  console.dir(listItem);
+}
