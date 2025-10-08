@@ -1,9 +1,15 @@
-const allLis = document.querySelectorAll("li");
+const listSecondChild = document.querySelector("li:nth-child(2)");
+console.log(listSecondChild);
 
-allLis.forEach((item) => {
-  console.log(item.textContent);
-});
+const liFirst = document.querySelector("li");
+console.log(liFirst.textContent);
+console.log(liFirst.nextSibling);
+console.log(liFirst.nextElementSibling);
 
-for (const listItem of allLis) {
-  console.dir(listItem);
-}
+const ul = document.querySelector("ul");
+//console.log(ul.children[1]);
+console.log("ul children nextsibling", ul.children[0].nextElementSibling);
+console.log(
+  "ul first element child",
+  ul.firstElementChild.nextElementSibling.textContent
+);
